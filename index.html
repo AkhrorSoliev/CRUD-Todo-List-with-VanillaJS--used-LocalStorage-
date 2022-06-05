@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD todo LIST</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container my-5 text-center">
+      <h1 class="display-4">Todo List</h1>
+      <small>
+        by
+        <a href="https://www.github.com/akhrorSoliev">Akhror Soliev</a>
+      </small>
+    </header>
+    <main class="container">
+      <form id="create-form" class="mb-3">
+        <div class="mb-3">
+          <label for="input-create" class="form-label">Enter Todo Text</label>
+          <input
+            id="input-create"
+            type="text"
+            class="form-control"
+            placeholder="Text..."
+            autocomplete="off"
+          />
+          <span id="change-error-main" class="text-danger"></span>
+        </div>
+        <button class="btn btn-primary ms-auto d-block">Add</button>
+      </form>
+
+      <div class="todos-div">
+        <ul id="todos-ul-list" class="list-todos list-group"></ul>
+      </div>
+    </main>
+    <div id="modal" class="todo-modal hidden">
+      <div class="card">
+        <div
+          class="card-header d-flex align-items-center justify-content-between"
+        >
+          <h4>Change This Todo</h4>
+          <img
+            id="close-modal"
+            src="img/close.svg"
+            width="20"
+            height="20"
+            alt=""
+          />
+        </div>
+        <div class="card-body">
+          <form id="change-form">
+            <div class="mb-3">
+              <input
+                type="text"
+                id="change-input"
+                class="form-control"
+                autocomplete="off"
+                placeholder="text for change"
+              />
+              <span id="change-error" class="text-danger"></span>
+            </div>
+            <span class="d-flex">
+              <button class="btn btn-primary d-block ms-auto">
+                Save Changes
+              </button>
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay" class="overlay hidden"></div>
+
+    <!-- script -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

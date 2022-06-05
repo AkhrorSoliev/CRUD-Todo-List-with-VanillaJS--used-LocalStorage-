@@ -1,0 +1,49 @@
+.container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.button-div img {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.button-div img:hover {
+  transform: scale(1.3);
+}
+
+.list-group-item {
+  transition: 0.5s;
+}
+
+.list-group-item:hover {
+  background-color: #ccc;
+}
+
+.todo-modal {
+  max-width: 500px;
+  width: 100%;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(29, 28, 28, 0.5);
+  backdrop-filter: blur(1px);
+}
+
+#close-modal {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
